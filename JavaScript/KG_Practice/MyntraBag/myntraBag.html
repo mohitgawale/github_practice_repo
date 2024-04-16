@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="myntraBag.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables</title>
+</head> 
+<body>
+
+    <button class="Bag-Button" onclick="
+      cartQuantity += 1;
+      document.querySelector('#cart-summary').innerText = `Your Bag has ${cartQuantity} Items`
+      ">Add to bag</button>
+
+    <button class="Wishlist-Button" onclick="
+      cartQuantity -= 1;
+      document.querySelector('#cart-summary').innerText = `Your Bag has ${cartQuantity} Items`
+    ">❤️ Move to Wishlist</button>  
+    <button class="Bag-Button" onclick="
+     cartQuantity += 2;
+      document.querySelector('#cart-summary').innerText = `Your Bag has ${cartQuantity} Items`
+    ">Add 1+1 Item in bag</button>
+
+    <button class="Wishlist-Button" onclick="
+    cartQuantity = 0;
+    document.querySelector('#cart-summary').innerText = `Your Bag has ${cartQuantity} Items`
+    ">Reset Button</button>
+
+
+    <h1 id="cart-summary"></h1>
+  <script>
+    let cartQuantity = 0;
+    document.querySelector('#cart-summary').innerText = `Your Bag has ${cartQuantity} Items`
+    console.log(cartQuantity)
+  </script>
+  
+</body>
+</html>
