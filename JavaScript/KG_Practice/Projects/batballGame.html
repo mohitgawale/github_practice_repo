@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bat Bowl Game</title>
+  <link rel="stylesheet" href="batBallGame.css">
+</head>
+<body>
+  <div id = "center-alignment">
+    <h1>Bat Ball Game</h1>
+    <button id = 'Button' onclick="
+      const userMsgDisplay = 'User has choosen Bat'
+      console.log(userMsgDisplay)
+      let computerChoice = genComputerChoice();
+      // console.log(computerChoice)
+      const compMsgDisplay = 'computer has choosen ' + computerChoice
+      console.log(compMsgDisplay)
+      result = getResult('Bat',computerChoice)
+      console.log(result)
+      "> Bat </button>
+
+      
+
+    <button id = 'Button' onclick="
+      userMsgDisplay = 'User has choosen Bat'
+      console.log(userMsgDisplay)
+      computerChoice = genComputerChoice();
+      // console.log(computerChoice)
+      compMsgDisplay = 'computer has choosen ' + computerChoice
+      console.log(compMsgDisplay)
+      result = getResult('Bowl',computerChoice)
+      console.log(result)
+    "> Bowl </button>
+
+    <button id = 'Button' onclick="
+      userMsgDisplay = 'User has choosen Bat'
+      console.log(userMsgDisplay)
+      computerChoice = genComputerChoice();
+      // console.log(computerChoice)
+      compMsgDisplay = 'computer has choosen ' + computerChoice
+      console.log(compMsgDisplay)
+      result = getResult('Stump',computerChoice)
+      console.log(result)
+    "> Stump </button>
+</div>
+  <script>
+
+    function genComputerChoice(){
+      let randomNumber = Math.random() * 3;
+      if (randomNumber>0 && randomNumber <1){
+        computerChoice = 'Bat'
+      }
+      else if (randomNumber>1 && randomNumber <2){
+        computerChoice = 'Bowl'
+      }
+      else {
+        computerChoice='Stump'
+      }
+    return computerChoice
+    }
+
+    function getResult(userMove ,computerMove) {
+      
+      if (userMove=='Bat'){
+        if (computerMove=='Bowl'){
+          return 'User Won'
+        }
+        else if (computerMove== 'Stump'){
+          return 'Computer Won'
+        }
+        else if (computerMove == 'Bat') {
+          return 'It is Tie'
+        }
+
+      }
+      else if (userMove=='Bowl'){
+        if (computerMove=='Bowl'){
+          return 'It is Tie'
+        }
+        else if (computerMove== 'Stump'){
+          return 'User Won'
+        }
+        else if (computerMove == 'Bat') {
+          return 'Compture Won'
+        }
+
+      }
+      else if (userMove=='Stump'){
+        if (computerMove=='Bowl'){
+          return'Compture Won'
+        }
+        else if (computerMove== 'Stump'){
+          return'It is Tie'
+        }
+        else if (computerMove == 'Bat') {
+          return'USer Won'
+        }
+      }
+
+    }
+
+  </script>
+</body>
+</html>
