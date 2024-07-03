@@ -70,6 +70,11 @@
 
   void descendingPattern(int n){
     /*
+    *****
+    ****
+    ***
+    **
+    *
     */
    for (int i=1; i<=n ; i++){
     for (int j=1; j<=n-i+1; j++){
@@ -81,6 +86,11 @@
 
    void descendingPatternwithNumbers(int n){
     /*
+    12345
+    1234
+    123
+    12
+    1
     */
    for (int i=1; i<=n ; i++){
     for (int j=1; j<=n-i+1; j++){
@@ -90,30 +100,91 @@
    }
   }
 
-  void pyramidPattern(int n){
+    void pyramidupPattern(int n){
+      /*
+       *
+      ***
+     *****
+      */
     for(int i=0; i<n; i++){
 
-      for (int j=0;j<=i; j++){
+      for (int j=0;j<n-i-1; j++){
         cout<<' ';
       }
-      for (int k=0;k<((n*2)-1)-i*2; k++){
+      for (int k=0;k<((i*2)+1); k++){
         cout<<'*';
       }
-      for (int j=0;j<=i; j++){
+      for (int j=0;j<n-i-1; j++){
         cout<<' ';
       }
     cout<<endl;
     }
   }
 
+
+  void pyramiddownPattern(int n){
+    /*
+   *****  
+    ***
+     *
+    */
+    for(int i=0; i<n; i++){
+
+      for (int j=0;j<i; j++){
+        cout<<' ';
+      }
+      for (int k=0;k<((n*2)-1)-i*2; k++){
+        cout<<'*';
+      }
+      for (int j=0;j<i; j++){
+        cout<<' ';
+      }
+    cout<<endl;
+    }
+  }
+
+  void pyramidcombinePattern(int n){
+    /*
+     *
+    ***
+   *****
+   *****  
+    ***
+     *
+    */
+    pyramidupPattern(n);
+    pyramiddownPattern(n);
+  }
+
+  void righttrianglePattern(int n){
+    /*
+    
+    */
+
+   for (int i=1; i<=(n*2)-1 ;i++){
+    int no_of_stars = i;
+    if (i>n){
+        no_of_stars = 2*n-i;
+    }
+    for (int j=1; j<=no_of_stars;j++){
+      cout<<'*';
+    }
+    cout<<endl;
+   }
+   }
+
   int main(){
-    rectanglePattern(4);
-    ascendingPatter(5);
-    ascendingPatternwithnumbers(5);
-    increasingNumbers(5);
-    ascendingPatternwithsamenumbers(5);
-    descendingPattern(5);
-    descendingPatternwithNumbers(5);
-     pyramidPattern(5);
+    // rectanglePattern(4);
+    // ascendingPatter(5);
+    // ascendingPatternwithnumbers(5);
+    // increasingNumbers(5);
+    // ascendingPatternwithsamenumbers(5);
+    // descendingPattern(5);
+    // descendingPatternwithNumbers(5);
+    //  pyramidupPattern(5);
+    //  pyramiddownPattern(5);
+    // pyramidcombinePattern(5);
+    // righttrianglePattern(5);
+
     return 0;
   }
