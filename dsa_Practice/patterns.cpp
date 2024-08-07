@@ -173,6 +173,23 @@
    }
    }
 
+
+   void numbersPattern(int n){
+    for (int i =1;i<=n;i++){
+      for (int j=1;j<=i;j++){
+        cout<<j;
+      }
+      for (int k=1;k <= (n-(i))*2;k++){
+        cout<<' ';
+      } 
+      for (int m=i;m>=1 ;m--){
+        cout<<m;
+      }
+      cout<<endl;
+    }
+
+   }
+
   int main(){
     // rectanglePattern(4);
     // ascendingPatter(5);
@@ -185,6 +202,7 @@
     //  pyramiddownPattern(5);
     // pyramidcombinePattern(5);
     // righttrianglePattern(5);
+    numbersPattern(4);
 
     return 0;
   }
