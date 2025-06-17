@@ -1,0 +1,10 @@
+use strict ; // treats all code as Newer Version
+Null is a object
+Undefined is a variable
+
+"23abc" -> Nan but Nan is a number
+
+
+boolean 1-> true 0 -> false
+boolean "" -> false
+boolean "mohit" -> true
