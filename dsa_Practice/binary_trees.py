@@ -100,3 +100,6 @@ def level_order(root):
         print(f"Level {current_level}: {' '.join(map(str, level_nodes))}")
 
 level_order(tree)
+
+
+
